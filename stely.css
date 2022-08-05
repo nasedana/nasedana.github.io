@@ -1,6 +1,15 @@
 .jumbotron {
   padding-top: 7rem;
-  background-color: #e8aead;
+  background-image: url(favorit/UJ0tqH.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 -100px;
+  color: #eaeaea;
+}
+
+.jumbotron h1,
+.jumbotron p {
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 #favorit {
@@ -9,4 +18,12 @@
 
 section {
   padding-top: 7rem;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
 }
