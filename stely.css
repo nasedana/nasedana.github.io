@@ -22,8 +22,102 @@ section {
 
 .gallery-img {
   width: 100%;
+  background-color: #e8aead;
 }
 
 #gallery .row > * {
   padding: 0;
+}
+
+#my-hero {
+  background-color: #e8aead;
+}
+
+/* my hero section */
+.hero-box {
+  position: relative;
+  background-color: #dc3545;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.hero-box::before {
+  content: "MY";
+  position: absolute;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 35px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.hero-box:hover::before {
+  opacity: 0.2;
+}
+
+.hero-box::after {
+  content: "HERO";
+  position: absolute;
+  color: #fff;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.hero-box:hover::after {
+  opacity: 0.2;
+}
+
+.hero-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #eaeaea;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 5px);
+  transition: 0.5s;
+}
+
+.hero-box:hover .hero-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.hero-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 90px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.hero-box:hover .hero-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.hero-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 70px);
+  max-width: 350px;
+  transition: 0.5s;
+}
+
+.hero-box:hover .hero-img {
+  transform: translate(-50%, -50%, 70px) rotate(-5deg) scale(1.2);
 }
